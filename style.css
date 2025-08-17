@@ -64,3 +64,32 @@ h6 {
 /*
 Project CSS
 */
+:root {
+    --primary-color: hsl(0, 0%, 15%);
+    --secondary-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(281, 100%, 15%);
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header {
+    grid-column: 2 / -1;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+}
+
+.content {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
