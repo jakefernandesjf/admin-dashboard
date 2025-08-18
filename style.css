@@ -64,6 +64,7 @@ h6 {
 /*
 Project CSS
 */
+
 :root {
     --primary-color: hsl(0, 0%, 15%);
     --secondary-color: hsl(0, 0%, 100%);
@@ -71,9 +72,11 @@ Project CSS
 }
 
 body {
+    font-family: "Roboto", Arial, sans-serif;
+
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
 }
 
@@ -87,9 +90,61 @@ body {
     grid-row: 1 / -1;
     color: var(--secondary-color);
     background-color: var(--accent-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 20px;
 }
 
 .content {
     color: var(--secondary-color);
     background-color: var(--primary-color);
+}
+
+button {
+    background-color: transparent;
+    border: transparent;
+}
+
+.fill-secondary {
+    fill: var(--secondary-color)
+}
+
+/* sidebar */
+.sidebar-title {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1ch;
+}
+
+.sidebar-title>svg {
+    flex-shrink: 0;
+}
+
+.sidebar-button {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+}
+
+.sidebar-navigation {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-settings-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
