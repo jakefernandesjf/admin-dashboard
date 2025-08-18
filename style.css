@@ -84,6 +84,9 @@ body {
     grid-column: 2 / -1;
     color: var(--primary-color);
     background-color: var(--secondary-color);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar {
@@ -107,8 +110,17 @@ button {
     border: transparent;
 }
 
+.fill-primary {
+    fill: var(--primary-color);
+}
+
 .fill-secondary {
-    fill: var(--secondary-color)
+    fill: var(--secondary-color);
+}
+
+.profile-pic {
+    border-radius: 50%;
+    border: solid 1px var(--accent-color);
 }
 
 /* sidebar */
@@ -147,4 +159,42 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+
+/* header */
+.header-top {
+    display: flex;
+}
+
+.search-bar {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+    padding-inline-start: 20px;
+    padding-inline-end: 500px;
+}
+
+.search-bar > input {
+    flex: 1;
+
+    background-color: rgb(194, 194, 194);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding-inline: 2ch;
+}
+
+.profile-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    gap: 1ch
 }
