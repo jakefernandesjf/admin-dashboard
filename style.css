@@ -69,6 +69,7 @@ Project CSS
     --primary-color: hsl(0, 0%, 15%);
     --secondary-color: hsl(0, 0%, 100%);
     --accent-color: hsl(281, 100%, 15%);
+    --shadow-color: hsl(281, 100%, 90%);
 }
 
 body {
@@ -103,11 +104,17 @@ body {
 .content {
     color: var(--secondary-color);
     background-color: var(--primary-color);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 button {
     background-color: transparent;
     border: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .fill-primary {
@@ -118,9 +125,8 @@ button {
     fill: var(--secondary-color);
 }
 
-.profile-pic {
-    border-radius: 50%;
-    border: solid 1px var(--accent-color);
+.fill-accent {
+    fill: var(--accent-color);
 }
 
 /* sidebar */
@@ -139,8 +145,6 @@ button {
 
 .sidebar-button {
     color: var(--secondary-color);
-    font-size: 1.5rem;
-    font-weight: 600;
 
     display: flex;
     align-items: center;
@@ -193,6 +197,11 @@ button {
     padding: 20px;
 }
 
+.profile-pic {
+    border-radius: 50%;
+    border: solid 1px var(--accent-color);
+}
+
 .profile-button {
     display: flex;
     align-items: center;
@@ -225,4 +234,48 @@ button {
     border-radius: 50px;
     width: 120px;
     height: 40px;
+}
+
+/* Content */
+.projects {
+    grid-row: 1 / -1;
+    grid-column: 1 / span 1;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projects-container {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-left: 10px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 
+        20px 20px 20px -20px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px 20px 40px;
+}
+
+.card > p {
+    flex: 1;
+    max-width: 50ch;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: end;
+    gap: 1ch;
 }
