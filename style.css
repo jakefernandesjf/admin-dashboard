@@ -201,7 +201,7 @@ button {
 
 .profile-pic {
     border-radius: 50%;
-    border: solid 1px var(--clr-accent);
+    box-shadow: 10px 10px 15px -15px var(--clr-shadow);
 }
 
 .profile-button {
@@ -236,6 +236,7 @@ button {
     border-radius: 50px;
     width: 120px;
     height: 40px;
+    box-shadow: 10px 10px 15px -15px var(--clr-shadow);
 }
 
 /* Content */
@@ -303,4 +304,29 @@ button {
 .announcements-container article {
     padding-left: 10px;
     border-left: 1px solid var(--clr-accent);
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+.trending-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: var(--clr-foreground);
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px -20px var(--clr-shadow);
+}
+
+.trending-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
