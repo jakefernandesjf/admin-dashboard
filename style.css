@@ -66,10 +66,11 @@ Project CSS
 */
 
 :root {
-    --primary-color: hsl(0, 0%, 15%);
-    --secondary-color: hsl(0, 0%, 100%);
-    --accent-color: hsl(281, 100%, 15%);
-    --shadow-color: hsl(281, 100%, 90%);
+    --clr-background: hsl(0, 0%, 80%);
+    --clr-foreground: hsl(0, 0%, 100%);
+    --clr-accent: hsl(281, 100%, 15%);
+    --clr-shadow: black;
+    --clr-text: black;
 }
 
 body {
@@ -83,8 +84,8 @@ body {
 
 .header {
     grid-column: 2 / -1;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: var(--clr-text);
+    background-color: var(--clr-foreground);
 
     display: flex;
     flex-direction: column;
@@ -92,8 +93,8 @@ body {
 
 .sidebar {
     grid-row: 1 / -1;
-    color: var(--secondary-color);
-    background-color: var(--accent-color);
+    color: var(--clr-foreground);
+    background-color: var(--clr-accent);
 
     display: flex;
     flex-direction: column;
@@ -102,8 +103,8 @@ body {
 }
 
 .content {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    color: var(--clr-text);
+    background-color: var(--clr-background);
 
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -118,15 +119,15 @@ button {
 }
 
 .fill-primary {
-    fill: var(--primary-color);
+    fill: var(--clr-background);
 }
 
 .fill-secondary {
-    fill: var(--secondary-color);
+    fill: var(--clr-foreground);
 }
 
 .fill-accent {
-    fill: var(--accent-color);
+    fill: var(--clr-accent);
 }
 
 /* sidebar */
@@ -144,7 +145,7 @@ button {
 }
 
 .sidebar-button {
-    color: var(--secondary-color);
+    color: var(--clr-foreground);
 
     display: flex;
     align-items: center;
@@ -184,7 +185,7 @@ button {
 .search-bar>input {
     flex: 1;
 
-    background-color: rgb(194, 194, 194);
+    background-color: var(--clr-background);
     border: 1px solid transparent;
     border-radius: 15px;
     padding-inline: 2ch;
@@ -199,7 +200,7 @@ button {
 
 .profile-pic {
     border-radius: 50%;
-    border: solid 1px var(--accent-color);
+    border: solid 1px var(--clr-accent);
 }
 
 .profile-button {
@@ -228,8 +229,8 @@ button {
 }
 
 .header-bottom-buttons>button {
-    color: var(--secondary-color);
-    background-color: var(--accent-color);
+    color: var(--clr-foreground);
+    background-color: var(--clr-accent);
     font-weight: 600;
     border-radius: 50px;
     width: 120px;
@@ -256,12 +257,12 @@ button {
 }
 
 .card {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-left: 10px solid var(--accent-color);
+    color: var(--clr-text);
+    background-color: var(--clr-foreground);
+    border-left: 10px solid var(--clr-accent);
     border-radius: 10px;
     box-shadow: 
-        20px 20px 20px -20px var(--shadow-color);
+        20px 20px 20px -20px var(--clr-shadow);
 
     display: flex;
     flex-direction: column;
@@ -277,5 +278,5 @@ button {
 .card-footer {
     display: flex;
     justify-content: end;
-    gap: 1ch;
+    gap: 10px;
 }
