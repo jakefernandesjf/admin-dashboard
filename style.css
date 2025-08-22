@@ -177,7 +177,7 @@ button {
     padding-inline-end: 500px;
 }
 
-.search-bar > input {
+.search-bar>input {
     flex: 1;
 
     background-color: rgb(194, 194, 194);
@@ -196,5 +196,33 @@ button {
 .profile-button {
     display: flex;
     align-items: center;
-    gap: 1ch
+    gap: 1ch;
+}
+
+.header-bottom {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 20px 20px;
+}
+
+.profile-welcome {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.header-bottom-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.header-bottom-buttons>button {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    font-weight: 600;
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
 }
